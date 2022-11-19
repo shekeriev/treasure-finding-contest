@@ -14,7 +14,7 @@ If the images have the following names (***img-frontend***, ***img-databse***, a
 docker container run -d --name con-frontend --net app-net -p 8080:5000 img-frontend
 
 # Run the database component
-docker container run -d --name con-database --net app-net -e MYSQL_ROOT_PASSWORD='ExamPa$$w0rd' img-backend
+docker container run -d --name con-database --net app-net -e MYSQL_ROOT_PASSWORD='ExamPa$$w0rd' img-database
 
 # Run the backend component
 docker container run -d --name con-backend --net app-net img-backend
