@@ -7,17 +7,17 @@ The general setup looks like:
 
 ![general setup](setup.png)
 
-If the images have the following names (***img-frontend***, ***img-databse***, and ***img-backend***), then the correct commands to run the application in ***test mode*** *(published on port 8080)* would be:
+If the images have the following names (***img-frontend***, ***img-databse***, and ***img-backend***), and there is the ***app-net*** network present, then the correct commands to run the application in ***test mode*** *(published on port 8080)* would be:
 
 ```bash
 # Run the frontend component
-docker container run -d --name con-frontend --net game-net -p 8080:5000 img-frontend
+docker container run -d --name con-frontend --net app-net -p 8080:5000 img-frontend
 
 # Run the database component
-docker container run -d --name con-database --net game-net -e MYSQL_ROOT_PASSWORD='ExamPa$$w0rd' img-backend
+docker container run -d --name con-database --net app-net -e MYSQL_ROOT_PASSWORD='ExamPa$$w0rd' img-backend
 
 # Run the backend component
-docker container run -d --name con-backend --net game-net img-backend
+docker container run -d --name con-backend --net app-net img-backend
 
 ```
 
