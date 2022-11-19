@@ -1,0 +1,5 @@
+CREATE DATABASE game_events CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE game_events;
+
+CREATE TABLE events (id INT AUTO_INCREMENT, ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, event varchar(255), PRIMARY KEY(id));
